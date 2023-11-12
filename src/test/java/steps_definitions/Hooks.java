@@ -17,15 +17,15 @@ public class Hooks {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origins=*");
-        String appUrl = "https://www.saucedemo.com/";
+        String appUrl = "https://www.hilton.com/en/hilton-honors/";
 
         driver = new ChromeDriver(option);
         driver.get(appUrl);
         driver.manage().window().maximize();
     }
 
-    @After
-    public void closeBrowser(){
-        driver.quit();
-    }
+//    @After
+//    public void closeBrowser(){
+//        driver.quit();
+//    }
 }

@@ -3,25 +3,40 @@ Feature: Login
   As a user i want to login to account
 
   @positive
-  Scenario: Login With Valid Credentials
-    Given User already open the website
-    When User set input "standard_user" as username
-    And User set input "secret_sauce" as password
+  Scenario Outline: Login With Valid Credentials
+    Given User click on sign in button
+    And User wait 2 sec
+    And User already open the website
+    And User wait 2 sec
+    When User set input "<username>" as username
+    And User wait 2 sec
+    And User set input "<password>" as password
+    And User wait 2 sec
     And User click login button
-    Then User already on homepage
+    And User wait 31 sec
+    And User click login button
+    And User wait 2 sec
+    Then User already on account page
+    Examples:
+      | username   | password             |
+      | 1972644973 | fuqVy0-qopdom-pujvof |
 
   @negative
   Scenario Outline: Login With Invalid Credentials
-    Given User already open the website
+    Given User click on sign in button
+    And User wait 2 sec
+    And User already open the website
+    And User wait 2 sec
     When User set input "<username>" as username
+    And User wait 2 sec
     And User set input "<password>" as password
+    And User wait 2 sec
     And User click login button
-    Then User get "<error>" as error message
+    And User wait 5 sec
+    Then User observe error message
+    Examples:
+      | username   | password             |
+      | 1972633190 | tyvnef-Xocwej-9ziscy |
 
-    Examples: Negative Scenarios Data
-      | username       | password     | error                                                                     |
-      |                |              | Epic sadface: Username is required                                        |
-      | standard_user  |              | Epic sadface: Password is required                                        |
-      | standard_user1 |              | Epic sadface: Password is required                                        |
-      |                | secret_sauce | Epic sadface: Username is required                                        |
-      | standard_user  | secret_sauc  | Epic sadface: Username and password do not match any user in this service |
+
+
