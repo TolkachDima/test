@@ -30,8 +30,8 @@ public class Hooks {
         driver.manage().window().maximize();
     }
 
-//    @After
-//    public void closeBrowser(){
-//        driver.quit();
-//    }
+   @After
+   public void closeBrowser(){
+       driver.quit();
+   }
 }
