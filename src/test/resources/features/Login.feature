@@ -5,17 +5,17 @@ Feature: Login
   @positive
   Scenario Outline: Login With Valid Credentials
     Given User click on sign in button
-    And User wait 2 sec
+    And User wait 5 sec
     And User already open the website
-    And User wait 2 sec
+    And User wait 5 sec
     When User set input "<username>" as username
-    And User wait 2 sec
+    And User wait 5 sec
     And User set input "<password>" as password
-    And User wait 2 sec
+    And User wait 5 sec
     And User click login button
     And User wait 31 sec
     And User click login button
-    And User wait 2 sec
+    And User wait 5 sec
     Then User already on account page
     Examples:
       | username   | password             |
@@ -24,13 +24,13 @@ Feature: Login
   @negative
   Scenario Outline: Login With Invalid Credentials
     Given User click on sign in button
-    And User wait 2 sec
+    And User wait 5 sec
     And User already open the website
-    And User wait 2 sec
+    And User wait 5 sec
     When User set input "<username>" as username
-    And User wait 2 sec
+    And User wait 5 sec
     And User set input "<password>" as password
-    And User wait 2 sec
+    And User wait 5 sec
     And User click login button
     And User wait 5 sec
     Then User observe error message
