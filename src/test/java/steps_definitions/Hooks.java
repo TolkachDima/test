@@ -16,12 +16,12 @@ public class Hooks {
 
         WebDriverManager.chromedriver().clearDriverCache().setup();
         ChromeOptions option = new ChromeOptions();
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-gpu"); // applicable to windows os only
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox"); // Bypass OS security model
+        option.addArguments("start-maximized"); // open Browser in maximized mode
+        option.addArguments("disable-infobars"); // disabling infobars
+        option.addArguments("--disable-extensions"); // disabling extensions
+        option.addArguments("--disable-gpu"); // applicable to windows os only
+        option.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        option.addArguments("--no-sandbox"); // Bypass OS security model
         option.addArguments("--remote-allow-origins=*");
         String appUrl = "https://www.hilton.com/en/hilton-honors/";
 
