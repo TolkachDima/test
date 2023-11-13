@@ -22,8 +22,8 @@ public class Hooks {
         // option.addArguments("--disable-gpu"); // applicable to windows os only
         // option.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         // option.addArguments("--no-sandbox"); // Bypass OS security model
-        option.addArguments("headless");
-        option.addArguments("disable-gpu");
+        // option.addArguments("headless");
+        // option.addArguments("disable-gpu");
         option.addArguments("--remote-allow-origins=*");
         String appUrl = "https://www.hilton.com/en/hilton-honors/";
 
