@@ -24,15 +24,7 @@ public class Hooks {
         // option.addArguments("--no-sandbox"); // Bypass OS security model
         // option.addArguments("headless");
         // option.addArguments("disable-gpu");
-        options.addArguments("--headless=new"); // open headless browser
-        options.addArguments("--start-maximized"); // open browser in maximized mode
-        options.addArguments("--window-size=1920,1080"); // browser resolution
-        options.addArguments("--enable-automation");
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox"); // bypass OS security model
-        options.addArguments("--disable-browser-side-navigation");
-        options.setAcceptInsecureCerts(true); // bypass SSL certs
+       
         options.addArguments("--remote-allow-origins=*");
         String appUrl = "https://www.hilton.com/en/hilton-honors/";
 
